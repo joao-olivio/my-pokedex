@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
     "core-js": "^3.8.3",
+    "lodash": "^4.17.21",
     "nuxt": "^2.14.12",
     "sass-rem": "^3.0.0"
   },
