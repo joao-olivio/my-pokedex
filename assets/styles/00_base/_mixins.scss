@@ -1,0 +1,23 @@
+@mixin for-medium {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin for-large {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin for-extra-large {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin for-double-extra-large {
+  @media screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
