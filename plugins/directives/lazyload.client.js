@@ -4,7 +4,7 @@ import Vue from 'vue';
 const ROOT_MARGIN = '150px 150px 150px 150px';
 const DEFAULT_THRESHOLD = [0.006];
 
-const getMatchingImageToMedia = (backgroundList, viewportWidth = document.documentElement.clientWidth) => {
+export const getMatchingImageToMedia = (backgroundList, viewportWidth = document.documentElement.clientWidth) => {
   if (typeof backgroundList === 'string') return backgroundList;
 
   const breakpoints = Object.keys(backgroundList).reverse();
@@ -14,7 +14,7 @@ const getMatchingImageToMedia = (backgroundList, viewportWidth = document.docume
   return backgroundList[matching];
 }
 
-Vue.directive('lazyload', {
+export const lazyloadDirective = {
   inserted: (el, binding) => {
     const updateCurrentImage = () => {
       const url = getMatchingImageToMedia(binding.value);
@@ -28,6 +28,7 @@ Vue.directive('lazyload', {
             updateCurrentImage();
             el.resizeListener = debounce(updateCurrentImage, 300);
             window.addEventListener('resize', el.resizeListener);
+            imageIntersectionObserver.unobserve(entry.target)
           }
         })
       },
@@ -37,5 +38,7 @@ Vue.directive('lazyload', {
   unbind: el => {
     if (el.resizeListener) window.removeEventListener('resize', el.resizeListener);
   }
-})
+}
+
+Vue.directive('lazyload', lazyloadDirective);
 
