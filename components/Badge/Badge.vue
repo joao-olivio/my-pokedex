@@ -1,12 +1,10 @@
 <template>
-  <a :href="link" class="badge" :class="computedClass">{{text}}</a>
+  <a :href="link" class="badge" :class="computedClass">{{ text }}</a>
 </template>
 
 <script>
-
-
 export default {
-  name: 'badge',
+  name: "badge",
   props: {
     text: {
       type: String,
@@ -15,15 +13,13 @@ export default {
     link: {
       type: String,
       required: true,
-      default: '#'
-    }
+      default: "#",
+    },
   },
   computed: {
     computedClass() {
-      return [
-        `badge--${this.text}`
-      ]
-    }
-  }
-}
+      return [`badge--${this.text}`];
+    },
+  },
+};
 </script>
