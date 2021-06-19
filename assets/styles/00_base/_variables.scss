@@ -1,3 +1,5 @@
+$font-family-base: 'Roboto';
+
 // https://getbootstrap.com/docs/5.0/layout/breakpoints/
 $breakpoint-md: rem(768px);
 $breakpoint-lg: rem(992px);
@@ -26,12 +28,10 @@ $container-xl: rem(1140px);
 $container-xxl: rem(1320px);
 
 // https://learnui.design/blog/mobile-desktop-website-font-size-guidelines.html
-$heading-font-size: rem(32px);
-$base-font-size: rem(16px);
-$secondary-font-size: rem(14px);
-$label-font-size: rem(12px);
-
-
+$font-size-heading: rem(32px);
+$font-size-base: rem(16px);
+$font-size-seconadry: rem(14px);
+$font-size-label: rem(12px);
 
 
 $margin-bottom-sm: rem(16px);
@@ -42,8 +42,34 @@ $gutter-sm: rem(8px);
 $gutter-md: rem(12px);
 $gutter-lg: rem(16px);
 
+$border-radius-xs: rem(4px);
+$border-radius-sm: rem(8px);
+$border-radius-md: rem(16px);
+$border-radius-lg: rem(32px);
+$border-radius-xl: rem(32px);
+
 $item-per-row-sm: 2;
 $items-per-row-md: 3;
 $items-per-row-lg: 4;
 $items-per-row-xl: 5;
 $items-per-row-xxl: 5;
+
+
+$pokemon-type-bug: #000;
+$pokemon-type-dark: #000;
+$pokemon-type-dragon: #000;
+$pokemon-type-electric: #000;
+$pokemon-type-fairy: #000;
+$pokemon-type-fight: #000;
+$pokemon-type-fire: #000;
+$pokemon-type-flying: #000;
+$pokemon-type-ghost: #000;
+$pokemon-type-grass: #000;
+$pokemon-type-ground: #000;
+$pokemon-type-ice: #000;
+$pokemon-type-normal: #000;
+$pokemon-type-poison: #000;
+$pokemon-type-psychic: #000;
+$pokemon-type-rock: #000;
+$pokemon-type-steel: #000;
+$pokemon-type-water: #000;
